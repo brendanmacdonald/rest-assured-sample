@@ -109,12 +109,6 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <configuration>
-                    <resultsDirectory>target/allure-results</resultsDirectory>
-                    <inputDirectories>target/allure-results</inputDirectories>
-                    <reportDirectory>target/allure-report</reportDirectory>
-                    <reportingOutputDirectory>target/allure-report</reportingOutputDirectory>
-                </configuration>
             </plugin>
         </plugins>
     </reporting>
