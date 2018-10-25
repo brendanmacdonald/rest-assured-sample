@@ -35,16 +35,17 @@ public class BaseRest {
         environment.put("OS name", System.getProperty("os.name"));
         environment.put("OS version", System.getProperty("os.version"));
         environment.put("URL", BASE_URI);
+        environment.put("PORT", String.valueOf(BASE_PORT));
 
         saveEnvironment();
     }
 
     private void saveEnvironment() {
-        File resultsFolder = new File("./build/allure-results");
+        File resultsFolder = new File("./target/allure-results");
         if (!resultsFolder.exists()) {
             resultsFolder.mkdirs();
         }
-        try (OutputStream out = new FileOutputStream("./build/allure-results/environment.properties")){
+        try (OutputStream out = new FileOutputStream("./target/allure-results/environment.properties")){
             environment.store(out, "Allure environment properties");
         } catch (IOException ex) {
             System.out.println(ex.getMessage());

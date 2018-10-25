@@ -3,7 +3,12 @@ Executed with:
 mvn clean test
 ```
 
-Generate the allure report
+Generate the allure report (to target\site\allure-maven-plugin)
 ```
-TBD
+mvn allure:report
+```
+
+Automatically display allure report
+```
+mvn allure:serve
 ```
